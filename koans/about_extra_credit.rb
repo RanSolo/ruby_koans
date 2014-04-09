@@ -1,4 +1,4 @@
-# EXTRA CREDIT:
+ # EXTRA CREDIT:
 #
 # Create a program that will play the Greed Game.
 # Rules for the game are in GREED_RULES.TXT.

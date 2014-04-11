@@ -5,6 +5,19 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # class DiceSet
 #   code ...
 # end
+class DiceSet
+  attr_reader :values
+  def roll(number_of_rolls)
+    @values = (0...number_of_rolls).map { 1 + rand(6) }
+  end
+end
+  # Class DiceSet
+  # def set_number_of_dice(1..6)
+  # def set_number_of_values_per_dice(1..6)
+  # end
+  #
+  # dice = DiceSet.new
+
 
 class AboutDiceProject < Neo::Koan
   def test_can_create_a_dice_set
@@ -16,6 +29,7 @@ class AboutDiceProject < Neo::Koan
     dice = DiceSet.new
 
     dice.roll(5)
+
     assert dice.values.is_a?(Array), "should be an array"
     assert_equal 5, dice.values.size
     dice.values.each do |value|
